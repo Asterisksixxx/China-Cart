@@ -1,0 +1,36 @@
+.sizeXs {
+  aspect-ratio: auto;
+  width: 30px;
+}
+
+.sizeS {
+  aspect-ratio: auto;
+  width: 45px;
+}
+
+.sizeM {
+  aspect-ratio: auto;
+  width: 90px;
+}
+
+.sizeL {
+  aspect-ratio: auto;
+  width: 200px;
+}
+
+.sizeXl {
+  aspect-ratio: auto;
+  width: 500px;
+}
+
+.alignStart {
+  align-self: flex-start;
+}
+
+.alignCenter {
+  align-self: center;
+}
+
+.alignEnd {
+  align-self: flex-end;
+}

@@ -1,6 +1,37 @@
-import { useColorScheme } from "../../../hooks";
-import { textAligns, textSizes, textWeights } from "./text.style";
+import styles from "./text.module.css";
 import type { TextProps } from "./text.type";
+
+const sizeClasses = {
+  xs: styles.sizeXs,
+  s: styles.sizeS,
+  m: styles.sizeM,
+  l: styles.sizeL,
+  xl: styles.sizeXl,
+};
+
+const weightClasses = {
+  regular: styles.weightRegular,
+  semibold: styles.weightSemibold,
+  bold: styles.weightBold,
+};
+
+const alignClasses = {
+  start: styles.alignStart,
+  center: styles.alignCenter,
+  end: styles.alignEnd,
+};
+
+const colorClasses = {
+  primary: styles.colorPrimary,
+  neutral: styles.colorNeutral,
+  background: styles.colorBackground,
+  foreground: styles.colorForeground,
+  danger: styles.colorDanger,
+  warning: styles.colorWarning,
+  success: styles.colorSuccess,
+  contrast: styles.colorContrast,
+  matter: styles.colorMatter,
+};
 
 const Text = ({
   children,
@@ -10,18 +41,18 @@ const Text = ({
   color = "foreground",
   weight = "regular",
 }: TextProps) => {
-  const { colors } = useColorScheme();
-  const styles = {
-    ...textSizes[size],
-    ...textAligns[align],
-    ...textWeights[weight],
-    ...(style || {}),
-    color: colors[color],
-  };
+  const className = [
+    sizeClasses[size],
+    weightClasses[weight],
+    alignClasses[align],
+    colorClasses[color],
+  ].join(" ");
 
   return (
     <>
-      <span style={styles}>{children}</span>
+      <span className={className} style={style}>
+        {children}
+      </span>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
-import type { ColorVariant } from "../../../hooks";
+import type { ColorVariant } from "../../../types/theme";
 
 type ButtonSize = "xs" | "s" | "m" | "l" | "xl";
 

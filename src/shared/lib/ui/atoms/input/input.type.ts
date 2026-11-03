@@ -1,5 +1,4 @@
-import type { ReactNode } from "react";
-import type { ColorVariant } from "../../../hooks";
+import type { ColorVariant } from "../../../types/theme";
 
 type InputAlign = "start" | "center" | "end";
 
@@ -8,7 +7,6 @@ type InputBorderRadius = "s" | "m" | "l";
 type InputBorderWidth = "s" | "m" | "l";
 
 type InputProps = {
-  children?: ReactNode;
   color?: ColorVariant;
   isDisabled?: boolean;
   align?: InputAlign;

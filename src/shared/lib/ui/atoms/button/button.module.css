@@ -1,0 +1,87 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s, background 0.2s, color 0.2s;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.sizeXs {
+  padding: 4px 10px;
+  font-size: 10px;
+  border-radius: 4px;
+  gap: 4px;
+}
+
+.sizeS {
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 6px;
+  gap: 6px;
+}
+
+.sizeM {
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 8px;
+  gap: 8px;
+}
+
+.sizeL {
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.sizeXl {
+  padding: 14px 28px;
+  font-size: 18px;
+  border-radius: 12px;
+  gap: 12px;
+}
+
+.variantPrimary {
+  background: var(--color-primary);
+  color: var(--color-contrast);
+  border: 1px solid transparent;
+}
+
+.variantSecondary {
+  background: var(--color-matter);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+}
+
+.variantIcon {
+  background: transparent;
+  color: var(--color-foreground);
+  border: 1px solid transparent;
+  padding: 6px;
+}
+
+.alignStart {
+  align-self: flex-start;
+}
+
+.alignCenter {
+  align-self: center;
+}
+
+.alignEnd {
+  align-self: flex-end;
+}
+
+.alignStretch {
+  align-self: stretch;
+}
+
+.fullWidth {
+  width: 100%;
+}

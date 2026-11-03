@@ -1,34 +1,58 @@
-import { useColorScheme } from "../../../hooks";
-import {
-  InputAligns,
-  InputBorderRadiuses,
-  InputBorderWidths,
-} from "./input.style";
+import styles from "./input.module.css";
 import type { InputProps } from "./input.type";
+
+const alignClasses = {
+  start: styles.alignStart,
+  center: styles.alignCenter,
+  end: styles.alignEnd,
+};
+
+const radiusClasses = {
+  s: styles.radiusS,
+  m: styles.radiusM,
+  l: styles.radiusL,
+};
+
+const borderClasses = {
+  s: styles.borderS,
+  m: styles.borderM,
+  l: styles.borderL,
+};
+
+const colorClasses = {
+  primary: styles.colorPrimary,
+  neutral: styles.colorNeutral,
+  background: styles.colorBackground,
+  foreground: styles.colorForeground,
+  danger: styles.colorDanger,
+  warning: styles.colorWarning,
+  success: styles.colorSuccess,
+  contrast: styles.colorContrast,
+  matter: styles.colorMatter,
+};
 
 const Input = ({
   align = "center",
   borderRadius = "s",
-  children,
   color = "background",
   isDisabled = false,
   borderWidth = "s",
   placeholder = "",
 }: InputProps) => {
-  const { colors } = useColorScheme();
-  const styles = {
-    ...InputBorderRadiuses[borderRadius],
-    ...InputBorderWidths[borderWidth],
-    ...InputAligns[align],
-    color: colors[color],
-    cursor: isDisabled ? "not-allowed" : "pointer",
-    opacity: isDisabled ? 0.5 : 1,
-  };
+  const className = [
+    styles.input,
+    radiusClasses[borderRadius],
+    borderClasses[borderWidth],
+    alignClasses[align],
+    colorClasses[color],
+    isDisabled ? styles.disabled : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <>
-      <input style={styles} placeholder={placeholder}>
-        {children}
-      </input>
+      <input className={className} placeholder={placeholder}></input>
     </>
   );
 };

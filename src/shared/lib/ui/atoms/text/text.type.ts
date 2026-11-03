@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from "react";
-import type { ColorVariant } from "../../../hooks";
+import type { ColorVariant } from "../../../types/theme";
 
 type TextSize = "xl" | "l" | "m" | "s" | "xs";
 

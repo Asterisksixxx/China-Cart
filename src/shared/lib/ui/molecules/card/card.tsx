@@ -4,7 +4,6 @@ import type { CardProps } from "./card.type";
 import styles from "./card.module.css";
 
 const Card = ({
-  // children, надо ли вообще карточке children?
   itemCost = "300$",
   itemImage = "https://a.allegroimg.com/s720/116d8e/850201d54289a5b474405ba2df7e/ogromny-i-super-dlugi-korek-analny-wtyczka-penis",
   itemName = "Залупа коня на присосках",
@@ -14,7 +13,7 @@ const Card = ({
   return (
     <>
       <li className={styles.item}>
-        <div className={styles.drag}>sds</div>
+        <div className={styles.drag}>drag</div>
         <div className={styles.main}>
           <div className={styles.image}>
             <Image source={itemImage} size="m" align="center"></Image>

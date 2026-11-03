@@ -1,7 +1,4 @@
-import type { ReactNode } from "react";
-
 type CardProps = {
-  children?: ReactNode;
   itemName?: string;
   itemDescription?: string;
   itemCost?: string;

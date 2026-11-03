@@ -1,6 +1,7 @@
 import "./App.css";
-import Button from "./shared/lib/ui/atoms/button";
-import Card from "./shared/lib/ui/molecules/card/card";
+import Button from "@/shared/lib/ui/atoms/button";
+import Card from "@/shared/lib/ui/molecules/card/card";
+import Icon from "@/shared/lib/ui/atoms/icon/icon";
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
       <div className="body">
         <div className="container">
           <nav className="topBar">
-            <div className="topBar__logo"></div>
+            <div className="topBar__logo">
+              <Icon name="bag" size="xl" />
+            </div>
             <div className="topBar__main">
               <h1 className="topBar__name">AliCart</h1>
               <h3 className="topBar__description">
@@ -29,6 +32,30 @@ function App() {
               </li>
             </ul>
           </nav>
+          <section className="palette">
+            <h2>Палитра (--color-*)</h2>
+            <ul className="palette__list">
+              {[
+                "primary",
+                "neutral",
+                "background",
+                "foreground",
+                "danger",
+                "warning",
+                "success",
+                "contrast",
+                "matter",
+              ].map((name) => (
+                <li key={name} className="palette__item">
+                  <span
+                    className="palette__swatch"
+                    style={{ background: `var(--color-${name})` }}
+                  ></span>
+                  <span className="palette__label">{name}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
           <section className="panel">
             <div className="panel__header">
               <div className="panel__text">

@@ -1,0 +1,79 @@
+.sizeXs {
+  font-size: 8px;
+}
+
+.sizeS {
+  font-size: 12px;
+}
+
+.sizeM {
+  font-size: 16px;
+}
+
+.sizeL {
+  font-size: 20px;
+}
+
+.sizeXl {
+  font-size: 24px;
+}
+
+.weightRegular {
+  font-weight: 400;
+}
+
+.weightSemibold {
+  font-weight: 600;
+}
+
+.weightBold {
+  font-weight: 700;
+}
+
+.alignStart {
+  text-align: start;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignEnd {
+  text-align: end;
+}
+
+.colorPrimary {
+  color: var(--color-primary);
+}
+
+.colorNeutral {
+  color: var(--color-neutral);
+}
+
+.colorBackground {
+  color: var(--color-background);
+}
+
+.colorForeground {
+  color: var(--color-foreground);
+}
+
+.colorDanger {
+  color: var(--color-danger);
+}
+
+.colorWarning {
+  color: var(--color-warning);
+}
+
+.colorSuccess {
+  color: var(--color-success);
+}
+
+.colorContrast {
+  color: var(--color-contrast);
+}
+
+.colorMatter {
+  color: var(--color-matter);
+}

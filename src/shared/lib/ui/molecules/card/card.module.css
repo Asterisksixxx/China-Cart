@@ -3,21 +3,21 @@
   justify-content: space-around;
   align-items: center;
   gap: 20px;
-  border: 2px, solid, var(--border);
+  border: 2px solid var(--color-border);
   border-radius: 0.625rem;
   padding: 16px;
 }
 .drag {
   flex: 0;
   background-color: red;
-  border: 2px, solid, var(--border);
+  border: 2px solid var(--color-border);
 }
 .main {
   flex: 0.6;
   display: flex;
   flex-direction: row;
   gap: 10px;
-  /* border: 2px, solid, var(--border); */
+  /* border: 2px solid var(--color-border); */
 }
 .image {
   background-color: red;
@@ -29,8 +29,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-
-  /* border: 2px, solid, var(--border); */
 }
 .name {
 }
@@ -44,19 +42,19 @@
   flex-direction: column;
   justify-content: space-evenly;
 
-  border: 2px, solid, var(--border);
+  border: 2px solid var(--color-border);
 }
 .check {
   align-self: flex-end;
 
-  border: 2px, solid, var(--border);
+  border: 2px solid var(--color-border);
 }
 .buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  border: 2px, solid, var(--border);
+  border: 2px solid var(--color-border);
 }
 .reference {
 }

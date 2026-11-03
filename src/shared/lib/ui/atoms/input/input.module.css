@@ -1,0 +1,82 @@
+.input {
+  background: transparent;
+  border-style: solid;
+  border-color: var(--color-border);
+}
+
+.alignStart {
+  align-self: flex-start;
+}
+
+.alignCenter {
+  align-self: center;
+}
+
+.alignEnd {
+  align-self: flex-end;
+}
+
+.radiusS {
+  border-radius: 8px;
+}
+
+.radiusM {
+  border-radius: 16px;
+}
+
+.radiusL {
+  border-radius: 32px;
+}
+
+.borderS {
+  border-width: 1px;
+}
+
+.borderM {
+  border-width: 2px;
+}
+
+.borderL {
+  border-width: 3px;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.colorPrimary {
+  color: var(--color-primary);
+}
+
+.colorNeutral {
+  color: var(--color-neutral);
+}
+
+.colorBackground {
+  color: var(--color-background);
+}
+
+.colorForeground {
+  color: var(--color-foreground);
+}
+
+.colorDanger {
+  color: var(--color-danger);
+}
+
+.colorWarning {
+  color: var(--color-warning);
+}
+
+.colorSuccess {
+  color: var(--color-success);
+}
+
+.colorContrast {
+  color: var(--color-contrast);
+}
+
+.colorMatter {
+  color: var(--color-matter);
+}

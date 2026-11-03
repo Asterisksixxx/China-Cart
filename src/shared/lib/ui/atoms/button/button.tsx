@@ -1,6 +1,26 @@
-import type { CSSProperties } from "react";
 import type { ButtonProps } from "./button.type";
-import { buttonAligns, buttonSizes, buttonVariants } from "./button.style";
+import styles from "./button.module.css";
+
+const sizeClasses = {
+  xs: styles.sizeXs,
+  s: styles.sizeS,
+  m: styles.sizeM,
+  l: styles.sizeL,
+  xl: styles.sizeXl,
+};
+
+const variantClasses = {
+  primary: styles.variantPrimary,
+  secondary: styles.variantSecondary,
+  icon: styles.variantIcon,
+};
+
+const alignClasses = {
+  start: styles.alignStart,
+  center: styles.alignCenter,
+  end: styles.alignEnd,
+  stretch: styles.alignStretch,
+};
 
 const Button = ({
   children,
@@ -16,30 +36,28 @@ const Button = ({
   style,
   ...rest
 }: ButtonProps) => {
-  const styles: CSSProperties = {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    cursor: disabled ? "not-allowed" : "pointer",
-    opacity: disabled ? 0.5 : 1,
-    transition: "opacity 0.2s, background 0.2s, color 0.2s",
-    whiteSpace: "nowrap",
-    ...buttonSizes[size],
-    ...buttonVariants[variant],
-    ...buttonAligns[align],
-    ...(variant === "primary" && color !== "primary"
-      ? { background: `var(--${color})` }
-      : {}),
-    ...(fullWidth ? { width: "100%" } : {}),
-    ...(style ?? {}),
-  };
+  const className = [
+    styles.button,
+    sizeClasses[size],
+    variantClasses[variant],
+    alignClasses[align],
+    disabled ? styles.disabled : "",
+    fullWidth ? styles.fullWidth : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const customBackground =
+    variant === "primary" && color !== "primary"
+      ? { background: `var(--color-${color})` }
+      : null;
 
   const iconNode = loading ? "…" : icon;
 
   return (
     <button
-      className="button"
-      style={styles}
+      className={className}
+      style={{ ...(customBackground ?? {}), ...(style ?? {}) }}
       disabled={disabled || loading}
       {...rest}
     >
